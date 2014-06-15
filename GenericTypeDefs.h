@@ -84,6 +84,7 @@ __EXTENSION typedef signed long long    INT64;
 typedef unsigned int        UINT;
 typedef unsigned char       UINT8;
 typedef unsigned short int  UINT16;
+
 /* 24-bit type only available on C18 */
 #if defined(__18CXX)
 typedef unsigned short long UINT24;

@@ -16,5 +16,8 @@
 #define    U2TX_IRQ_NO        42
 
 
+// Some functions
+void Init_Dma(void);
+
 #endif	/* DMAPHYLEAS_H */
 

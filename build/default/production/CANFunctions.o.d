@@ -4,4 +4,5 @@ CANFunctions.h  \
  GenericTypeDefs.h  \
 Explorer16.h  \
 CAN.h  \
-Xbee.h 
+Xbee.h  \
+Encoder.h 

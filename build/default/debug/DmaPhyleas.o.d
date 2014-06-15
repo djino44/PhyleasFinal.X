@@ -1,3 +1,5 @@
 build/default/debug/DmaPhyleas.o:  \
 DmaPhyleas.c  \
-DmaPhyleas.h 
+DmaPhyleas.h  \
+Decoder.h  \
+ GenericTypeDefs.h 

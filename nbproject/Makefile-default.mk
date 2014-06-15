@@ -45,17 +45,17 @@ OBJECTDIR=build/${CND_CONF}/${IMAGE_TYPE}
 DISTDIR=dist/${CND_CONF}/${IMAGE_TYPE}
 
 # Source Files Quoted if spaced
-SOURCEFILES_QUOTED_IF_SPACED=AffichAppDemo.c Bluetooth.c CANFunctions.c Decoder.c DmaPhyleas.c Encoder.c Explore.c Explorer16.c LCDBlocking.c LCDlib.c Main.c mywi.c TimeDelay.c TimerFunctions.c Xbee.c
+SOURCEFILES_QUOTED_IF_SPACED=TimerFunctions.c TimeDelay.c Explorer16.c Explore.c CANFunctions.c DmaPhyleas.c Encoder.c Decoder.c LCDlib.c LCDBlocking.c AffichAppDemo.c Xbee.c mywi.c Bluetooth.c Main.c
 
 # Object Files Quoted if spaced
-OBJECTFILES_QUOTED_IF_SPACED=${OBJECTDIR}/AffichAppDemo.o ${OBJECTDIR}/Bluetooth.o ${OBJECTDIR}/CANFunctions.o ${OBJECTDIR}/Decoder.o ${OBJECTDIR}/DmaPhyleas.o ${OBJECTDIR}/Encoder.o ${OBJECTDIR}/Explore.o ${OBJECTDIR}/Explorer16.o ${OBJECTDIR}/LCDBlocking.o ${OBJECTDIR}/LCDlib.o ${OBJECTDIR}/Main.o ${OBJECTDIR}/mywi.o ${OBJECTDIR}/TimeDelay.o ${OBJECTDIR}/TimerFunctions.o ${OBJECTDIR}/Xbee.o
-POSSIBLE_DEPFILES=${OBJECTDIR}/AffichAppDemo.o.d ${OBJECTDIR}/Bluetooth.o.d ${OBJECTDIR}/CANFunctions.o.d ${OBJECTDIR}/Decoder.o.d ${OBJECTDIR}/DmaPhyleas.o.d ${OBJECTDIR}/Encoder.o.d ${OBJECTDIR}/Explore.o.d ${OBJECTDIR}/Explorer16.o.d ${OBJECTDIR}/LCDBlocking.o.d ${OBJECTDIR}/LCDlib.o.d ${OBJECTDIR}/Main.o.d ${OBJECTDIR}/mywi.o.d ${OBJECTDIR}/TimeDelay.o.d ${OBJECTDIR}/TimerFunctions.o.d ${OBJECTDIR}/Xbee.o.d
+OBJECTFILES_QUOTED_IF_SPACED=${OBJECTDIR}/TimerFunctions.o ${OBJECTDIR}/TimeDelay.o ${OBJECTDIR}/Explorer16.o ${OBJECTDIR}/Explore.o ${OBJECTDIR}/CANFunctions.o ${OBJECTDIR}/DmaPhyleas.o ${OBJECTDIR}/Encoder.o ${OBJECTDIR}/Decoder.o ${OBJECTDIR}/LCDlib.o ${OBJECTDIR}/LCDBlocking.o ${OBJECTDIR}/AffichAppDemo.o ${OBJECTDIR}/Xbee.o ${OBJECTDIR}/mywi.o ${OBJECTDIR}/Bluetooth.o ${OBJECTDIR}/Main.o
+POSSIBLE_DEPFILES=${OBJECTDIR}/TimerFunctions.o.d ${OBJECTDIR}/TimeDelay.o.d ${OBJECTDIR}/Explorer16.o.d ${OBJECTDIR}/Explore.o.d ${OBJECTDIR}/CANFunctions.o.d ${OBJECTDIR}/DmaPhyleas.o.d ${OBJECTDIR}/Encoder.o.d ${OBJECTDIR}/Decoder.o.d ${OBJECTDIR}/LCDlib.o.d ${OBJECTDIR}/LCDBlocking.o.d ${OBJECTDIR}/AffichAppDemo.o.d ${OBJECTDIR}/Xbee.o.d ${OBJECTDIR}/mywi.o.d ${OBJECTDIR}/Bluetooth.o.d ${OBJECTDIR}/Main.o.d
 
 # Object Files
-OBJECTFILES=${OBJECTDIR}/AffichAppDemo.o ${OBJECTDIR}/Bluetooth.o ${OBJECTDIR}/CANFunctions.o ${OBJECTDIR}/Decoder.o ${OBJECTDIR}/DmaPhyleas.o ${OBJECTDIR}/Encoder.o ${OBJECTDIR}/Explore.o ${OBJECTDIR}/Explorer16.o ${OBJECTDIR}/LCDBlocking.o ${OBJECTDIR}/LCDlib.o ${OBJECTDIR}/Main.o ${OBJECTDIR}/mywi.o ${OBJECTDIR}/TimeDelay.o ${OBJECTDIR}/TimerFunctions.o ${OBJECTDIR}/Xbee.o
+OBJECTFILES=${OBJECTDIR}/TimerFunctions.o ${OBJECTDIR}/TimeDelay.o ${OBJECTDIR}/Explorer16.o ${OBJECTDIR}/Explore.o ${OBJECTDIR}/CANFunctions.o ${OBJECTDIR}/DmaPhyleas.o ${OBJECTDIR}/Encoder.o ${OBJECTDIR}/Decoder.o ${OBJECTDIR}/LCDlib.o ${OBJECTDIR}/LCDBlocking.o ${OBJECTDIR}/AffichAppDemo.o ${OBJECTDIR}/Xbee.o ${OBJECTDIR}/mywi.o ${OBJECTDIR}/Bluetooth.o ${OBJECTDIR}/Main.o
 
 # Source Files
-SOURCEFILES=AffichAppDemo.c Bluetooth.c CANFunctions.c Decoder.c DmaPhyleas.c Encoder.c Explore.c Explorer16.c LCDBlocking.c LCDlib.c Main.c mywi.c TimeDelay.c TimerFunctions.c Xbee.c
+SOURCEFILES=TimerFunctions.c TimeDelay.c Explorer16.c Explore.c CANFunctions.c DmaPhyleas.c Encoder.c Decoder.c LCDlib.c LCDBlocking.c AffichAppDemo.c Xbee.c mywi.c Bluetooth.c Main.c
 
 
 CFLAGS=
@@ -91,29 +91,35 @@ endif
 # ------------------------------------------------------------------------------------
 # Rules for buildStep: compile
 ifeq ($(TYPE_IMAGE), DEBUG_RUN)
-${OBJECTDIR}/AffichAppDemo.o: AffichAppDemo.c  nbproject/Makefile-${CND_CONF}.mk
+${OBJECTDIR}/TimerFunctions.o: TimerFunctions.c  nbproject/Makefile-${CND_CONF}.mk
 	@${MKDIR} ${OBJECTDIR} 
-	@${RM} ${OBJECTDIR}/AffichAppDemo.o.d 
-	@${RM} ${OBJECTDIR}/AffichAppDemo.o 
-	@${FIXDEPS} "${OBJECTDIR}/AffichAppDemo.o.d" $(SILENT) -rsi ${MP_CC_DIR}../  -c ${MP_CC}  $(MP_EXTRA_CC_PRE) -g -D__DEBUG -D__MPLAB_DEBUGGER_REAL_ICE=1 -fframe-base-loclist  -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -MMD -MF "${OBJECTDIR}/AffichAppDemo.o.d" -o ${OBJECTDIR}/AffichAppDemo.o AffichAppDemo.c   
+	@${RM} ${OBJECTDIR}/TimerFunctions.o.d 
+	@${RM} ${OBJECTDIR}/TimerFunctions.o 
+	@${FIXDEPS} "${OBJECTDIR}/TimerFunctions.o.d" $(SILENT) -rsi ${MP_CC_DIR}../  -c ${MP_CC}  $(MP_EXTRA_CC_PRE) -g -D__DEBUG -D__MPLAB_DEBUGGER_REAL_ICE=1 -fframe-base-loclist  -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -MMD -MF "${OBJECTDIR}/TimerFunctions.o.d" -o ${OBJECTDIR}/TimerFunctions.o TimerFunctions.c   
 	
-${OBJECTDIR}/Bluetooth.o: Bluetooth.c  nbproject/Makefile-${CND_CONF}.mk
+${OBJECTDIR}/TimeDelay.o: TimeDelay.c  nbproject/Makefile-${CND_CONF}.mk
 	@${MKDIR} ${OBJECTDIR} 
-	@${RM} ${OBJECTDIR}/Bluetooth.o.d 
-	@${RM} ${OBJECTDIR}/Bluetooth.o 
-	@${FIXDEPS} "${OBJECTDIR}/Bluetooth.o.d" $(SILENT) -rsi ${MP_CC_DIR}../  -c ${MP_CC}  $(MP_EXTRA_CC_PRE) -g -D__DEBUG -D__MPLAB_DEBUGGER_REAL_ICE=1 -fframe-base-loclist  -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -MMD -MF "${OBJECTDIR}/Bluetooth.o.d" -o ${OBJECTDIR}/Bluetooth.o Bluetooth.c   
+	@${RM} ${OBJECTDIR}/TimeDelay.o.d 
+	@${RM} ${OBJECTDIR}/TimeDelay.o 
+	@${FIXDEPS} "${OBJECTDIR}/TimeDelay.o.d" $(SILENT) -rsi ${MP_CC_DIR}../  -c ${MP_CC}  $(MP_EXTRA_CC_PRE) -g -D__DEBUG -D__MPLAB_DEBUGGER_REAL_ICE=1 -fframe-base-loclist  -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -MMD -MF "${OBJECTDIR}/TimeDelay.o.d" -o ${OBJECTDIR}/TimeDelay.o TimeDelay.c   
+	
+${OBJECTDIR}/Explorer16.o: Explorer16.c  nbproject/Makefile-${CND_CONF}.mk
+	@${MKDIR} ${OBJECTDIR} 
+	@${RM} ${OBJECTDIR}/Explorer16.o.d 
+	@${RM} ${OBJECTDIR}/Explorer16.o 
+	@${FIXDEPS} "${OBJECTDIR}/Explorer16.o.d" $(SILENT) -rsi ${MP_CC_DIR}../  -c ${MP_CC}  $(MP_EXTRA_CC_PRE) -g -D__DEBUG -D__MPLAB_DEBUGGER_REAL_ICE=1 -fframe-base-loclist  -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -MMD -MF "${OBJECTDIR}/Explorer16.o.d" -o ${OBJECTDIR}/Explorer16.o Explorer16.c   
+	
+${OBJECTDIR}/Explore.o: Explore.c  nbproject/Makefile-${CND_CONF}.mk
+	@${MKDIR} ${OBJECTDIR} 
+	@${RM} ${OBJECTDIR}/Explore.o.d 
+	@${RM} ${OBJECTDIR}/Explore.o 
+	@${FIXDEPS} "${OBJECTDIR}/Explore.o.d" $(SILENT) -rsi ${MP_CC_DIR}../  -c ${MP_CC}  $(MP_EXTRA_CC_PRE) -g -D__DEBUG -D__MPLAB_DEBUGGER_REAL_ICE=1 -fframe-base-loclist  -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -MMD -MF "${OBJECTDIR}/Explore.o.d" -o ${OBJECTDIR}/Explore.o Explore.c   
 	
 ${OBJECTDIR}/CANFunctions.o: CANFunctions.c  nbproject/Makefile-${CND_CONF}.mk
 	@${MKDIR} ${OBJECTDIR} 
 	@${RM} ${OBJECTDIR}/CANFunctions.o.d 
 	@${RM} ${OBJECTDIR}/CANFunctions.o 
 	@${FIXDEPS} "${OBJECTDIR}/CANFunctions.o.d" $(SILENT) -rsi ${MP_CC_DIR}../  -c ${MP_CC}  $(MP_EXTRA_CC_PRE) -g -D__DEBUG -D__MPLAB_DEBUGGER_REAL_ICE=1 -fframe-base-loclist  -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -MMD -MF "${OBJECTDIR}/CANFunctions.o.d" -o ${OBJECTDIR}/CANFunctions.o CANFunctions.c   
-	
-${OBJECTDIR}/Decoder.o: Decoder.c  nbproject/Makefile-${CND_CONF}.mk
-	@${MKDIR} ${OBJECTDIR} 
-	@${RM} ${OBJECTDIR}/Decoder.o.d 
-	@${RM} ${OBJECTDIR}/Decoder.o 
-	@${FIXDEPS} "${OBJECTDIR}/Decoder.o.d" $(SILENT) -rsi ${MP_CC_DIR}../  -c ${MP_CC}  $(MP_EXTRA_CC_PRE) -g -D__DEBUG -D__MPLAB_DEBUGGER_REAL_ICE=1 -fframe-base-loclist  -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -MMD -MF "${OBJECTDIR}/Decoder.o.d" -o ${OBJECTDIR}/Decoder.o Decoder.c   
 	
 ${OBJECTDIR}/DmaPhyleas.o: DmaPhyleas.c  nbproject/Makefile-${CND_CONF}.mk
 	@${MKDIR} ${OBJECTDIR} 
@@ -127,23 +133,11 @@ ${OBJECTDIR}/Encoder.o: Encoder.c  nbproject/Makefile-${CND_CONF}.mk
 	@${RM} ${OBJECTDIR}/Encoder.o 
 	@${FIXDEPS} "${OBJECTDIR}/Encoder.o.d" $(SILENT) -rsi ${MP_CC_DIR}../  -c ${MP_CC}  $(MP_EXTRA_CC_PRE) -g -D__DEBUG -D__MPLAB_DEBUGGER_REAL_ICE=1 -fframe-base-loclist  -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -MMD -MF "${OBJECTDIR}/Encoder.o.d" -o ${OBJECTDIR}/Encoder.o Encoder.c   
 	
-${OBJECTDIR}/Explore.o: Explore.c  nbproject/Makefile-${CND_CONF}.mk
+${OBJECTDIR}/Decoder.o: Decoder.c  nbproject/Makefile-${CND_CONF}.mk
 	@${MKDIR} ${OBJECTDIR} 
-	@${RM} ${OBJECTDIR}/Explore.o.d 
-	@${RM} ${OBJECTDIR}/Explore.o 
-	@${FIXDEPS} "${OBJECTDIR}/Explore.o.d" $(SILENT) -rsi ${MP_CC_DIR}../  -c ${MP_CC}  $(MP_EXTRA_CC_PRE) -g -D__DEBUG -D__MPLAB_DEBUGGER_REAL_ICE=1 -fframe-base-loclist  -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -MMD -MF "${OBJECTDIR}/Explore.o.d" -o ${OBJECTDIR}/Explore.o Explore.c   
-	
-${OBJECTDIR}/Explorer16.o: Explorer16.c  nbproject/Makefile-${CND_CONF}.mk
-	@${MKDIR} ${OBJECTDIR} 
-	@${RM} ${OBJECTDIR}/Explorer16.o.d 
-	@${RM} ${OBJECTDIR}/Explorer16.o 
-	@${FIXDEPS} "${OBJECTDIR}/Explorer16.o.d" $(SILENT) -rsi ${MP_CC_DIR}../  -c ${MP_CC}  $(MP_EXTRA_CC_PRE) -g -D__DEBUG -D__MPLAB_DEBUGGER_REAL_ICE=1 -fframe-base-loclist  -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -MMD -MF "${OBJECTDIR}/Explorer16.o.d" -o ${OBJECTDIR}/Explorer16.o Explorer16.c   
-	
-${OBJECTDIR}/LCDBlocking.o: LCDBlocking.c  nbproject/Makefile-${CND_CONF}.mk
-	@${MKDIR} ${OBJECTDIR} 
-	@${RM} ${OBJECTDIR}/LCDBlocking.o.d 
-	@${RM} ${OBJECTDIR}/LCDBlocking.o 
-	@${FIXDEPS} "${OBJECTDIR}/LCDBlocking.o.d" $(SILENT) -rsi ${MP_CC_DIR}../  -c ${MP_CC}  $(MP_EXTRA_CC_PRE) -g -D__DEBUG -D__MPLAB_DEBUGGER_REAL_ICE=1 -fframe-base-loclist  -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -MMD -MF "${OBJECTDIR}/LCDBlocking.o.d" -o ${OBJECTDIR}/LCDBlocking.o LCDBlocking.c   
+	@${RM} ${OBJECTDIR}/Decoder.o.d 
+	@${RM} ${OBJECTDIR}/Decoder.o 
+	@${FIXDEPS} "${OBJECTDIR}/Decoder.o.d" $(SILENT) -rsi ${MP_CC_DIR}../  -c ${MP_CC}  $(MP_EXTRA_CC_PRE) -g -D__DEBUG -D__MPLAB_DEBUGGER_REAL_ICE=1 -fframe-base-loclist  -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -MMD -MF "${OBJECTDIR}/Decoder.o.d" -o ${OBJECTDIR}/Decoder.o Decoder.c   
 	
 ${OBJECTDIR}/LCDlib.o: LCDlib.c  nbproject/Makefile-${CND_CONF}.mk
 	@${MKDIR} ${OBJECTDIR} 
@@ -151,29 +145,17 @@ ${OBJECTDIR}/LCDlib.o: LCDlib.c  nbproject/Makefile-${CND_CONF}.mk
 	@${RM} ${OBJECTDIR}/LCDlib.o 
 	@${FIXDEPS} "${OBJECTDIR}/LCDlib.o.d" $(SILENT) -rsi ${MP_CC_DIR}../  -c ${MP_CC}  $(MP_EXTRA_CC_PRE) -g -D__DEBUG -D__MPLAB_DEBUGGER_REAL_ICE=1 -fframe-base-loclist  -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -MMD -MF "${OBJECTDIR}/LCDlib.o.d" -o ${OBJECTDIR}/LCDlib.o LCDlib.c   
 	
-${OBJECTDIR}/Main.o: Main.c  nbproject/Makefile-${CND_CONF}.mk
+${OBJECTDIR}/LCDBlocking.o: LCDBlocking.c  nbproject/Makefile-${CND_CONF}.mk
 	@${MKDIR} ${OBJECTDIR} 
-	@${RM} ${OBJECTDIR}/Main.o.d 
-	@${RM} ${OBJECTDIR}/Main.o 
-	@${FIXDEPS} "${OBJECTDIR}/Main.o.d" $(SILENT) -rsi ${MP_CC_DIR}../  -c ${MP_CC}  $(MP_EXTRA_CC_PRE) -g -D__DEBUG -D__MPLAB_DEBUGGER_REAL_ICE=1 -fframe-base-loclist  -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -MMD -MF "${OBJECTDIR}/Main.o.d" -o ${OBJECTDIR}/Main.o Main.c   
+	@${RM} ${OBJECTDIR}/LCDBlocking.o.d 
+	@${RM} ${OBJECTDIR}/LCDBlocking.o 
+	@${FIXDEPS} "${OBJECTDIR}/LCDBlocking.o.d" $(SILENT) -rsi ${MP_CC_DIR}../  -c ${MP_CC}  $(MP_EXTRA_CC_PRE) -g -D__DEBUG -D__MPLAB_DEBUGGER_REAL_ICE=1 -fframe-base-loclist  -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -MMD -MF "${OBJECTDIR}/LCDBlocking.o.d" -o ${OBJECTDIR}/LCDBlocking.o LCDBlocking.c   
 	
-${OBJECTDIR}/mywi.o: mywi.c  nbproject/Makefile-${CND_CONF}.mk
+${OBJECTDIR}/AffichAppDemo.o: AffichAppDemo.c  nbproject/Makefile-${CND_CONF}.mk
 	@${MKDIR} ${OBJECTDIR} 
-	@${RM} ${OBJECTDIR}/mywi.o.d 
-	@${RM} ${OBJECTDIR}/mywi.o 
-	@${FIXDEPS} "${OBJECTDIR}/mywi.o.d" $(SILENT) -rsi ${MP_CC_DIR}../  -c ${MP_CC}  $(MP_EXTRA_CC_PRE) -g -D__DEBUG -D__MPLAB_DEBUGGER_REAL_ICE=1 -fframe-base-loclist  -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -MMD -MF "${OBJECTDIR}/mywi.o.d" -o ${OBJECTDIR}/mywi.o mywi.c   
-	
-${OBJECTDIR}/TimeDelay.o: TimeDelay.c  nbproject/Makefile-${CND_CONF}.mk
-	@${MKDIR} ${OBJECTDIR} 
-	@${RM} ${OBJECTDIR}/TimeDelay.o.d 
-	@${RM} ${OBJECTDIR}/TimeDelay.o 
-	@${FIXDEPS} "${OBJECTDIR}/TimeDelay.o.d" $(SILENT) -rsi ${MP_CC_DIR}../  -c ${MP_CC}  $(MP_EXTRA_CC_PRE) -g -D__DEBUG -D__MPLAB_DEBUGGER_REAL_ICE=1 -fframe-base-loclist  -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -MMD -MF "${OBJECTDIR}/TimeDelay.o.d" -o ${OBJECTDIR}/TimeDelay.o TimeDelay.c   
-	
-${OBJECTDIR}/TimerFunctions.o: TimerFunctions.c  nbproject/Makefile-${CND_CONF}.mk
-	@${MKDIR} ${OBJECTDIR} 
-	@${RM} ${OBJECTDIR}/TimerFunctions.o.d 
-	@${RM} ${OBJECTDIR}/TimerFunctions.o 
-	@${FIXDEPS} "${OBJECTDIR}/TimerFunctions.o.d" $(SILENT) -rsi ${MP_CC_DIR}../  -c ${MP_CC}  $(MP_EXTRA_CC_PRE) -g -D__DEBUG -D__MPLAB_DEBUGGER_REAL_ICE=1 -fframe-base-loclist  -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -MMD -MF "${OBJECTDIR}/TimerFunctions.o.d" -o ${OBJECTDIR}/TimerFunctions.o TimerFunctions.c   
+	@${RM} ${OBJECTDIR}/AffichAppDemo.o.d 
+	@${RM} ${OBJECTDIR}/AffichAppDemo.o 
+	@${FIXDEPS} "${OBJECTDIR}/AffichAppDemo.o.d" $(SILENT) -rsi ${MP_CC_DIR}../  -c ${MP_CC}  $(MP_EXTRA_CC_PRE) -g -D__DEBUG -D__MPLAB_DEBUGGER_REAL_ICE=1 -fframe-base-loclist  -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -MMD -MF "${OBJECTDIR}/AffichAppDemo.o.d" -o ${OBJECTDIR}/AffichAppDemo.o AffichAppDemo.c   
 	
 ${OBJECTDIR}/Xbee.o: Xbee.c  nbproject/Makefile-${CND_CONF}.mk
 	@${MKDIR} ${OBJECTDIR} 
@@ -181,30 +163,54 @@ ${OBJECTDIR}/Xbee.o: Xbee.c  nbproject/Makefile-${CND_CONF}.mk
 	@${RM} ${OBJECTDIR}/Xbee.o 
 	@${FIXDEPS} "${OBJECTDIR}/Xbee.o.d" $(SILENT) -rsi ${MP_CC_DIR}../  -c ${MP_CC}  $(MP_EXTRA_CC_PRE) -g -D__DEBUG -D__MPLAB_DEBUGGER_REAL_ICE=1 -fframe-base-loclist  -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -MMD -MF "${OBJECTDIR}/Xbee.o.d" -o ${OBJECTDIR}/Xbee.o Xbee.c   
 	
-else
-${OBJECTDIR}/AffichAppDemo.o: AffichAppDemo.c  nbproject/Makefile-${CND_CONF}.mk
+${OBJECTDIR}/mywi.o: mywi.c  nbproject/Makefile-${CND_CONF}.mk
 	@${MKDIR} ${OBJECTDIR} 
-	@${RM} ${OBJECTDIR}/AffichAppDemo.o.d 
-	@${RM} ${OBJECTDIR}/AffichAppDemo.o 
-	@${FIXDEPS} "${OBJECTDIR}/AffichAppDemo.o.d" $(SILENT) -rsi ${MP_CC_DIR}../  -c ${MP_CC}  $(MP_EXTRA_CC_PRE)  -g -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -MMD -MF "${OBJECTDIR}/AffichAppDemo.o.d" -o ${OBJECTDIR}/AffichAppDemo.o AffichAppDemo.c   
+	@${RM} ${OBJECTDIR}/mywi.o.d 
+	@${RM} ${OBJECTDIR}/mywi.o 
+	@${FIXDEPS} "${OBJECTDIR}/mywi.o.d" $(SILENT) -rsi ${MP_CC_DIR}../  -c ${MP_CC}  $(MP_EXTRA_CC_PRE) -g -D__DEBUG -D__MPLAB_DEBUGGER_REAL_ICE=1 -fframe-base-loclist  -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -MMD -MF "${OBJECTDIR}/mywi.o.d" -o ${OBJECTDIR}/mywi.o mywi.c   
 	
 ${OBJECTDIR}/Bluetooth.o: Bluetooth.c  nbproject/Makefile-${CND_CONF}.mk
 	@${MKDIR} ${OBJECTDIR} 
 	@${RM} ${OBJECTDIR}/Bluetooth.o.d 
 	@${RM} ${OBJECTDIR}/Bluetooth.o 
-	@${FIXDEPS} "${OBJECTDIR}/Bluetooth.o.d" $(SILENT) -rsi ${MP_CC_DIR}../  -c ${MP_CC}  $(MP_EXTRA_CC_PRE)  -g -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -MMD -MF "${OBJECTDIR}/Bluetooth.o.d" -o ${OBJECTDIR}/Bluetooth.o Bluetooth.c   
+	@${FIXDEPS} "${OBJECTDIR}/Bluetooth.o.d" $(SILENT) -rsi ${MP_CC_DIR}../  -c ${MP_CC}  $(MP_EXTRA_CC_PRE) -g -D__DEBUG -D__MPLAB_DEBUGGER_REAL_ICE=1 -fframe-base-loclist  -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -MMD -MF "${OBJECTDIR}/Bluetooth.o.d" -o ${OBJECTDIR}/Bluetooth.o Bluetooth.c   
+	
+${OBJECTDIR}/Main.o: Main.c  nbproject/Makefile-${CND_CONF}.mk
+	@${MKDIR} ${OBJECTDIR} 
+	@${RM} ${OBJECTDIR}/Main.o.d 
+	@${RM} ${OBJECTDIR}/Main.o 
+	@${FIXDEPS} "${OBJECTDIR}/Main.o.d" $(SILENT) -rsi ${MP_CC_DIR}../  -c ${MP_CC}  $(MP_EXTRA_CC_PRE) -g -D__DEBUG -D__MPLAB_DEBUGGER_REAL_ICE=1 -fframe-base-loclist  -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -MMD -MF "${OBJECTDIR}/Main.o.d" -o ${OBJECTDIR}/Main.o Main.c   
+	
+else
+${OBJECTDIR}/TimerFunctions.o: TimerFunctions.c  nbproject/Makefile-${CND_CONF}.mk
+	@${MKDIR} ${OBJECTDIR} 
+	@${RM} ${OBJECTDIR}/TimerFunctions.o.d 
+	@${RM} ${OBJECTDIR}/TimerFunctions.o 
+	@${FIXDEPS} "${OBJECTDIR}/TimerFunctions.o.d" $(SILENT) -rsi ${MP_CC_DIR}../  -c ${MP_CC}  $(MP_EXTRA_CC_PRE)  -g -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -MMD -MF "${OBJECTDIR}/TimerFunctions.o.d" -o ${OBJECTDIR}/TimerFunctions.o TimerFunctions.c   
+	
+${OBJECTDIR}/TimeDelay.o: TimeDelay.c  nbproject/Makefile-${CND_CONF}.mk
+	@${MKDIR} ${OBJECTDIR} 
+	@${RM} ${OBJECTDIR}/TimeDelay.o.d 
+	@${RM} ${OBJECTDIR}/TimeDelay.o 
+	@${FIXDEPS} "${OBJECTDIR}/TimeDelay.o.d" $(SILENT) -rsi ${MP_CC_DIR}../  -c ${MP_CC}  $(MP_EXTRA_CC_PRE)  -g -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -MMD -MF "${OBJECTDIR}/TimeDelay.o.d" -o ${OBJECTDIR}/TimeDelay.o TimeDelay.c   
+	
+${OBJECTDIR}/Explorer16.o: Explorer16.c  nbproject/Makefile-${CND_CONF}.mk
+	@${MKDIR} ${OBJECTDIR} 
+	@${RM} ${OBJECTDIR}/Explorer16.o.d 
+	@${RM} ${OBJECTDIR}/Explorer16.o 
+	@${FIXDEPS} "${OBJECTDIR}/Explorer16.o.d" $(SILENT) -rsi ${MP_CC_DIR}../  -c ${MP_CC}  $(MP_EXTRA_CC_PRE)  -g -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -MMD -MF "${OBJECTDIR}/Explorer16.o.d" -o ${OBJECTDIR}/Explorer16.o Explorer16.c   
+	
+${OBJECTDIR}/Explore.o: Explore.c  nbproject/Makefile-${CND_CONF}.mk
+	@${MKDIR} ${OBJECTDIR} 
+	@${RM} ${OBJECTDIR}/Explore.o.d 
+	@${RM} ${OBJECTDIR}/Explore.o 
+	@${FIXDEPS} "${OBJECTDIR}/Explore.o.d" $(SILENT) -rsi ${MP_CC_DIR}../  -c ${MP_CC}  $(MP_EXTRA_CC_PRE)  -g -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -MMD -MF "${OBJECTDIR}/Explore.o.d" -o ${OBJECTDIR}/Explore.o Explore.c   
 	
 ${OBJECTDIR}/CANFunctions.o: CANFunctions.c  nbproject/Makefile-${CND_CONF}.mk
 	@${MKDIR} ${OBJECTDIR} 
 	@${RM} ${OBJECTDIR}/CANFunctions.o.d 
 	@${RM} ${OBJECTDIR}/CANFunctions.o 
 	@${FIXDEPS} "${OBJECTDIR}/CANFunctions.o.d" $(SILENT) -rsi ${MP_CC_DIR}../  -c ${MP_CC}  $(MP_EXTRA_CC_PRE)  -g -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -MMD -MF "${OBJECTDIR}/CANFunctions.o.d" -o ${OBJECTDIR}/CANFunctions.o CANFunctions.c   
-	
-${OBJECTDIR}/Decoder.o: Decoder.c  nbproject/Makefile-${CND_CONF}.mk
-	@${MKDIR} ${OBJECTDIR} 
-	@${RM} ${OBJECTDIR}/Decoder.o.d 
-	@${RM} ${OBJECTDIR}/Decoder.o 
-	@${FIXDEPS} "${OBJECTDIR}/Decoder.o.d" $(SILENT) -rsi ${MP_CC_DIR}../  -c ${MP_CC}  $(MP_EXTRA_CC_PRE)  -g -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -MMD -MF "${OBJECTDIR}/Decoder.o.d" -o ${OBJECTDIR}/Decoder.o Decoder.c   
 	
 ${OBJECTDIR}/DmaPhyleas.o: DmaPhyleas.c  nbproject/Makefile-${CND_CONF}.mk
 	@${MKDIR} ${OBJECTDIR} 
@@ -218,23 +224,11 @@ ${OBJECTDIR}/Encoder.o: Encoder.c  nbproject/Makefile-${CND_CONF}.mk
 	@${RM} ${OBJECTDIR}/Encoder.o 
 	@${FIXDEPS} "${OBJECTDIR}/Encoder.o.d" $(SILENT) -rsi ${MP_CC_DIR}../  -c ${MP_CC}  $(MP_EXTRA_CC_PRE)  -g -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -MMD -MF "${OBJECTDIR}/Encoder.o.d" -o ${OBJECTDIR}/Encoder.o Encoder.c   
 	
-${OBJECTDIR}/Explore.o: Explore.c  nbproject/Makefile-${CND_CONF}.mk
+${OBJECTDIR}/Decoder.o: Decoder.c  nbproject/Makefile-${CND_CONF}.mk
 	@${MKDIR} ${OBJECTDIR} 
-	@${RM} ${OBJECTDIR}/Explore.o.d 
-	@${RM} ${OBJECTDIR}/Explore.o 
-	@${FIXDEPS} "${OBJECTDIR}/Explore.o.d" $(SILENT) -rsi ${MP_CC_DIR}../  -c ${MP_CC}  $(MP_EXTRA_CC_PRE)  -g -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -MMD -MF "${OBJECTDIR}/Explore.o.d" -o ${OBJECTDIR}/Explore.o Explore.c   
-	
-${OBJECTDIR}/Explorer16.o: Explorer16.c  nbproject/Makefile-${CND_CONF}.mk
-	@${MKDIR} ${OBJECTDIR} 
-	@${RM} ${OBJECTDIR}/Explorer16.o.d 
-	@${RM} ${OBJECTDIR}/Explorer16.o 
-	@${FIXDEPS} "${OBJECTDIR}/Explorer16.o.d" $(SILENT) -rsi ${MP_CC_DIR}../  -c ${MP_CC}  $(MP_EXTRA_CC_PRE)  -g -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -MMD -MF "${OBJECTDIR}/Explorer16.o.d" -o ${OBJECTDIR}/Explorer16.o Explorer16.c   
-	
-${OBJECTDIR}/LCDBlocking.o: LCDBlocking.c  nbproject/Makefile-${CND_CONF}.mk
-	@${MKDIR} ${OBJECTDIR} 
-	@${RM} ${OBJECTDIR}/LCDBlocking.o.d 
-	@${RM} ${OBJECTDIR}/LCDBlocking.o 
-	@${FIXDEPS} "${OBJECTDIR}/LCDBlocking.o.d" $(SILENT) -rsi ${MP_CC_DIR}../  -c ${MP_CC}  $(MP_EXTRA_CC_PRE)  -g -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -MMD -MF "${OBJECTDIR}/LCDBlocking.o.d" -o ${OBJECTDIR}/LCDBlocking.o LCDBlocking.c   
+	@${RM} ${OBJECTDIR}/Decoder.o.d 
+	@${RM} ${OBJECTDIR}/Decoder.o 
+	@${FIXDEPS} "${OBJECTDIR}/Decoder.o.d" $(SILENT) -rsi ${MP_CC_DIR}../  -c ${MP_CC}  $(MP_EXTRA_CC_PRE)  -g -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -MMD -MF "${OBJECTDIR}/Decoder.o.d" -o ${OBJECTDIR}/Decoder.o Decoder.c   
 	
 ${OBJECTDIR}/LCDlib.o: LCDlib.c  nbproject/Makefile-${CND_CONF}.mk
 	@${MKDIR} ${OBJECTDIR} 
@@ -242,11 +236,23 @@ ${OBJECTDIR}/LCDlib.o: LCDlib.c  nbproject/Makefile-${CND_CONF}.mk
 	@${RM} ${OBJECTDIR}/LCDlib.o 
 	@${FIXDEPS} "${OBJECTDIR}/LCDlib.o.d" $(SILENT) -rsi ${MP_CC_DIR}../  -c ${MP_CC}  $(MP_EXTRA_CC_PRE)  -g -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -MMD -MF "${OBJECTDIR}/LCDlib.o.d" -o ${OBJECTDIR}/LCDlib.o LCDlib.c   
 	
-${OBJECTDIR}/Main.o: Main.c  nbproject/Makefile-${CND_CONF}.mk
+${OBJECTDIR}/LCDBlocking.o: LCDBlocking.c  nbproject/Makefile-${CND_CONF}.mk
 	@${MKDIR} ${OBJECTDIR} 
-	@${RM} ${OBJECTDIR}/Main.o.d 
-	@${RM} ${OBJECTDIR}/Main.o 
-	@${FIXDEPS} "${OBJECTDIR}/Main.o.d" $(SILENT) -rsi ${MP_CC_DIR}../  -c ${MP_CC}  $(MP_EXTRA_CC_PRE)  -g -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -MMD -MF "${OBJECTDIR}/Main.o.d" -o ${OBJECTDIR}/Main.o Main.c   
+	@${RM} ${OBJECTDIR}/LCDBlocking.o.d 
+	@${RM} ${OBJECTDIR}/LCDBlocking.o 
+	@${FIXDEPS} "${OBJECTDIR}/LCDBlocking.o.d" $(SILENT) -rsi ${MP_CC_DIR}../  -c ${MP_CC}  $(MP_EXTRA_CC_PRE)  -g -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -MMD -MF "${OBJECTDIR}/LCDBlocking.o.d" -o ${OBJECTDIR}/LCDBlocking.o LCDBlocking.c   
+	
+${OBJECTDIR}/AffichAppDemo.o: AffichAppDemo.c  nbproject/Makefile-${CND_CONF}.mk
+	@${MKDIR} ${OBJECTDIR} 
+	@${RM} ${OBJECTDIR}/AffichAppDemo.o.d 
+	@${RM} ${OBJECTDIR}/AffichAppDemo.o 
+	@${FIXDEPS} "${OBJECTDIR}/AffichAppDemo.o.d" $(SILENT) -rsi ${MP_CC_DIR}../  -c ${MP_CC}  $(MP_EXTRA_CC_PRE)  -g -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -MMD -MF "${OBJECTDIR}/AffichAppDemo.o.d" -o ${OBJECTDIR}/AffichAppDemo.o AffichAppDemo.c   
+	
+${OBJECTDIR}/Xbee.o: Xbee.c  nbproject/Makefile-${CND_CONF}.mk
+	@${MKDIR} ${OBJECTDIR} 
+	@${RM} ${OBJECTDIR}/Xbee.o.d 
+	@${RM} ${OBJECTDIR}/Xbee.o 
+	@${FIXDEPS} "${OBJECTDIR}/Xbee.o.d" $(SILENT) -rsi ${MP_CC_DIR}../  -c ${MP_CC}  $(MP_EXTRA_CC_PRE)  -g -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -MMD -MF "${OBJECTDIR}/Xbee.o.d" -o ${OBJECTDIR}/Xbee.o Xbee.c   
 	
 ${OBJECTDIR}/mywi.o: mywi.c  nbproject/Makefile-${CND_CONF}.mk
 	@${MKDIR} ${OBJECTDIR} 
@@ -254,23 +260,17 @@ ${OBJECTDIR}/mywi.o: mywi.c  nbproject/Makefile-${CND_CONF}.mk
 	@${RM} ${OBJECTDIR}/mywi.o 
 	@${FIXDEPS} "${OBJECTDIR}/mywi.o.d" $(SILENT) -rsi ${MP_CC_DIR}../  -c ${MP_CC}  $(MP_EXTRA_CC_PRE)  -g -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -MMD -MF "${OBJECTDIR}/mywi.o.d" -o ${OBJECTDIR}/mywi.o mywi.c   
 	
-${OBJECTDIR}/TimeDelay.o: TimeDelay.c  nbproject/Makefile-${CND_CONF}.mk
+${OBJECTDIR}/Bluetooth.o: Bluetooth.c  nbproject/Makefile-${CND_CONF}.mk
 	@${MKDIR} ${OBJECTDIR} 
-	@${RM} ${OBJECTDIR}/TimeDelay.o.d 
-	@${RM} ${OBJECTDIR}/TimeDelay.o 
-	@${FIXDEPS} "${OBJECTDIR}/TimeDelay.o.d" $(SILENT) -rsi ${MP_CC_DIR}../  -c ${MP_CC}  $(MP_EXTRA_CC_PRE)  -g -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -MMD -MF "${OBJECTDIR}/TimeDelay.o.d" -o ${OBJECTDIR}/TimeDelay.o TimeDelay.c   
+	@${RM} ${OBJECTDIR}/Bluetooth.o.d 
+	@${RM} ${OBJECTDIR}/Bluetooth.o 
+	@${FIXDEPS} "${OBJECTDIR}/Bluetooth.o.d" $(SILENT) -rsi ${MP_CC_DIR}../  -c ${MP_CC}  $(MP_EXTRA_CC_PRE)  -g -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -MMD -MF "${OBJECTDIR}/Bluetooth.o.d" -o ${OBJECTDIR}/Bluetooth.o Bluetooth.c   
 	
-${OBJECTDIR}/TimerFunctions.o: TimerFunctions.c  nbproject/Makefile-${CND_CONF}.mk
+${OBJECTDIR}/Main.o: Main.c  nbproject/Makefile-${CND_CONF}.mk
 	@${MKDIR} ${OBJECTDIR} 
-	@${RM} ${OBJECTDIR}/TimerFunctions.o.d 
-	@${RM} ${OBJECTDIR}/TimerFunctions.o 
-	@${FIXDEPS} "${OBJECTDIR}/TimerFunctions.o.d" $(SILENT) -rsi ${MP_CC_DIR}../  -c ${MP_CC}  $(MP_EXTRA_CC_PRE)  -g -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -MMD -MF "${OBJECTDIR}/TimerFunctions.o.d" -o ${OBJECTDIR}/TimerFunctions.o TimerFunctions.c   
-	
-${OBJECTDIR}/Xbee.o: Xbee.c  nbproject/Makefile-${CND_CONF}.mk
-	@${MKDIR} ${OBJECTDIR} 
-	@${RM} ${OBJECTDIR}/Xbee.o.d 
-	@${RM} ${OBJECTDIR}/Xbee.o 
-	@${FIXDEPS} "${OBJECTDIR}/Xbee.o.d" $(SILENT) -rsi ${MP_CC_DIR}../  -c ${MP_CC}  $(MP_EXTRA_CC_PRE)  -g -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -MMD -MF "${OBJECTDIR}/Xbee.o.d" -o ${OBJECTDIR}/Xbee.o Xbee.c   
+	@${RM} ${OBJECTDIR}/Main.o.d 
+	@${RM} ${OBJECTDIR}/Main.o 
+	@${FIXDEPS} "${OBJECTDIR}/Main.o.d" $(SILENT) -rsi ${MP_CC_DIR}../  -c ${MP_CC}  $(MP_EXTRA_CC_PRE)  -g -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -MMD -MF "${OBJECTDIR}/Main.o.d" -o ${OBJECTDIR}/Main.o Main.c   
 	
 endif
 

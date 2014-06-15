@@ -1,2 +1,11 @@
 build/default/debug/Encoder.o:  \
-Encoder.c 
+Encoder.c  \
+CANFunctions.h  \
+GenericTypeDefs.h  \
+ Explorer16.h  \
+CAN.h  \
+CAN_Type.h  \
+Encoder.h  \
+Bluetooth.h  \
+Xbee.h  \
+ Selected_RFSolution.h 

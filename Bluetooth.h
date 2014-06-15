@@ -26,6 +26,7 @@ typedef struct
 void InitBluetooth(void);
 void Init_Tab(void);
 void WriteStringBluetooth(const char *string);
+void WriteStringBluetooth2(const char *string);
 void PutCharacterBluetooth(const char character);
 
 #endif	/* BLUETOOTH_H */

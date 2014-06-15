@@ -31,7 +31,7 @@ void Init_Xbee(void)
 
     // Enable multi-vector interrupts
     
-    WriteStringXbee("*** UART Xbee2 Initialized ***\r\n");
+    //WriteStringXbee("*** UART Xbee2 Initialized ***\r\n");
     
 }
 
@@ -47,6 +47,23 @@ void WriteStringXbee(const char *string)
 
         string++;
 
+        while(!UARTTransmissionHasCompleted(UART_MODULE_ID));
+    }
+}
+
+void WriteStringXbee2(const char *string)
+{
+    int i=0;
+    while(i<17)
+    {
+        while(!UARTTransmitterIsReady(UART_MODULE_ID));
+
+        UARTSendDataByte(UART_MODULE_ID, *string);
+
+        string++;
+        
+        i++;
+        
         while(!UARTTransmissionHasCompleted(UART_MODULE_ID));
     }
 }
@@ -80,6 +97,7 @@ void Reset_BT(void)
     mPORTBSetBits(BIT_9); //  reset
     DelayMs(1);
 }
+
 void __ISR(_UART_1_VECTOR, ipl2) IntUart1Handler(void)
 {
 	// Is this an RX interrupt?
@@ -110,28 +128,6 @@ void __ISR(_UART_1_VECTOR, ipl2) IntUart1Handler(void)
                     WriteStringXbee("Reset\n");
                 }
             #endif
-
-
-            if(toto=='p')
-            {
-                ProgMode();
-                WriteStringXbee("Prog.mode\n");
-            }
-            else if (toto=='d')
-            {
-                WriteStringXbee("Inforequest\n");
-                PutCharacterBluetooth('D');
-                PutCharacterBluetooth(0x0D);
-            }
-            else if (toto=='!')
-            {
-                Reset_BT();
-                WriteStringXbee("Reset\n");
-            }
-            else
-            {
-                PutCharacterBluetooth(toto);
-            }
 
 	    INTClearFlag(INT_SOURCE_UART_RX(UART_MODULE_ID));
 
